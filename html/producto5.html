@@ -22,7 +22,7 @@
       <div class="header__navigation">
         
         <img class="header__menu" src="../img/icon-menu.svg" alt="menu icon">
-        <a href="index.html">
+        <a href="../index.html">
         <img class="header__logo" src="../img/logo.svg"   alt="logo">
         </a>
 
@@ -75,32 +75,38 @@
 
     <section class="content">
       <article class="gallery">
-        <div class="gallery__image-container">
+        <div class="gallery__image-container" >
+           <style >
+            .gallery__image-container{
+              background-image: url('../img/image-product-5-1.jpg');
+            }
+            
+          </style> 
           <img class="gallery__previus" src="../img/icon-previous.svg" alt="previos">
           <img class="gallery__next" src="../img/icon-next.svg" alt="next">
         </div>
         <div class="gallery__thumnails">
-          <img id="1" class="gallery__thumnail" src="../img/image-product-1-thumbnail.jpg" alt="thumnail">
-          <img id="2" class="gallery__thumnail" src="../img/image-product-2-thumbnail.jpg" alt="thumnail">
-          <img id="3" class="gallery__thumnail" src="../img/image-product-3-thumbnail.jpg" alt="thumnail">
-          <img id="4" class="gallery__thumnail" src="../img/image-product-4-thumbnail.jpg" alt="thumnail">
+          <img id="1" class="gallery__thumnail" src="../img/image-product-5-1-thumbnail.jpg" alt="thumnail">
+          <img id="2" class="gallery__thumnail" src="../img/image-product-5-2-thumbnail.jpg" alt="thumnail">
+          <img id="3" class="gallery__thumnail" src="../img/image-product-5-3-thumbnail.jpg" alt="thumnail">
+          <img id="4" class="gallery__thumnail" src="../img/image-product-5-4-thumbnail.jpg" alt="thumnail">
         </div>
       </article>
 
       <article class="details">
        <h2 class="details__company">Zhangetsu Company</h2>
-       <h2 class="details__title">Fall Limited Edition Gundam Aerial</h2>
-       <p class="details__description">Nombre: Gundam Aerial 
-        Serie: Gundam Witch from Mercury
+       <h2 class="details__title">Gundam This is absolutely insane!</h2>
+       <p class="details__description">Nombre: This is absolutely insane!
+        Serie: Gundam Desconocido
         Características: Maqueta articulada
-        Marca: Bandai
+        Marca: Bandai  
         Escala: 1/144
         Material: Plástico
-        Fecha Lanzamiento: 2022</p>
+        Fecha de lanzamiento: 2017</p>
 
         <div class="details__prices">
-          <p class="details__now">  $45.000  <span class="details__discount">50%</span> </p>
-          <p class="details__before">  $90.000</p>
+          <p class="details__now">  $50.000  <span class="details__discount">50%</span> </p>
+          <p class="details__before">  $100.000</p>
         </div>
         <div class="details__producto-quantity">
           <div class="input">
@@ -118,9 +124,9 @@
       <p class="cart-modal__title">Carrito de Gundams</p>
        <div class="cart-modal__chekout-container">
           <div class="cart-modal__details-container">
-            <img class="cart-modal__image" src="../img/image-product-1-thumbnail.jpg" alt="">
+            <img class="cart-modal__image" src="../img/image-product-5-1-thumbnail.jpg" alt="">
             <div>
-              <p class="cart-modal__product">Gundam Aerial Limited Edition...</p>
+              <p class="cart-modal__product">Gundam This is absolutely insane!...</p>
               <p class="cart-modal__price">$125.000 x 3 <span>$375.000</span></p>
             </div>
             <img class="cart-modal__delete" src="../img/icon-delete.svg" alt="delete">
@@ -146,14 +152,20 @@
       </div>
     
       <div class="modal-gallery__image-container">
+        <style >
+          .modal-gallery__image-container{
+            background-image: url('../img/image-product-5-1.jpg');
+          }
+          
+        </style> 
         <img class="modal-gallery__previus" src="../img/icon-previous.svg" alt="previos">
         <img class="modal-gallery__next" src="../img/icon-next.svg" alt="next">
       </div>
       <div class="modal-gallery__thumnails">
-        <img id="m1" class="modal-gallery__thumnail" src="../img/image-product-1-thumbnail.jpg" alt="thumnail">
-        <img id="m2" class="modal-gallery__thumnail" src="../img/image-product-2-thumbnail.jpg" alt="thumnail">
-        <img id="m3" class="modal-gallery__thumnail" src="../img/image-product-3-thumbnail.jpg" alt="thumnail">
-        <img id="m4" class="modal-gallery__thumnail" src="../img/image-product-4-thumbnail.jpg" alt="thumnail">
+        <img id="m1" class="modal-gallery__thumnail" src="../img/image-product-5-1-thumbnail.jpg" alt="thumnail">
+        <img id="m2" class="modal-gallery__thumnail" src="../img/image-product-5-2-thumbnail.jpg" alt="thumnail">
+        <img id="m3" class="modal-gallery__thumnail" src="../img/image-product-5-3-thumbnail.jpg" alt="thumnail">
+        <img id="m4" class="modal-gallery__thumnail" src="../img/image-product-5-4-thumbnail.jpg" alt="thumnail">
       </div>
     </article>
   </div>
@@ -168,6 +180,6 @@
 
 
 
-  <script src="../main.js"></script>
+  <script src="../js/main5.js"></script>
 </body>
 </html>
