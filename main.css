@@ -486,7 +486,7 @@ body {
   }
 }
 
-/* sass sass/style.scss main.css --watch   (en terminal promp para actualizar los cambios en css */
+/* y  sass sass/style.scss main.css --watch  (en terminal promp para actualizar los cambios en css */
 .main-container {
   width: 375px;
   margin: auto;
