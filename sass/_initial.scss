@@ -1,0 +1,13 @@
+/* sass sass/style.scss main.css --watch   (en terminal promp para actualizar los cambios en css */
+@use 'variables' as v;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: v.$Font;
+  
+}

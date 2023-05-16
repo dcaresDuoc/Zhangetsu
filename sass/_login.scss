@@ -1,0 +1,52 @@
+
+// Estilos para el formulario de inicio de sesión
+#loginForm {
+    margin-bottom: 20px;
+  
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+  
+    input[type="text"],
+    input[type="password"] {
+      width: 200px;
+      margin-bottom: 10px;
+    }
+  
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+  }
+  
+  // Estilos para el formulario de registro
+  #registerForm {
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+  
+    input[type="text"],
+    input[type="password"] {
+      width: 200px;
+      margin-bottom: 10px;
+    }
+  
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+  }
+  
+  h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  

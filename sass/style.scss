@@ -1,0 +1,55 @@
+/* sass sass/style.scss main.css --watch   (en terminal promp para actualizar los cambios en css */
+
+@use 'initial';
+@use 'variables' as v;
+@use 'header';
+@use 'navbar';
+@use 'modal-navbar';
+@use 'gallery';
+@use 'details';
+@use 'input';
+@use 'modal-cart';
+@use 'modal-gallery';
+
+.main-container{
+    width: 375px;
+    //border: 1px solid black;
+    margin: auto;
+    position: relative;
+    /*super poder de sass nestin para meter dentro de los parametro de responsive */
+    @media (min-width: 1115px){
+        width: 1115px;
+       
+    }
+
+}
+.content{
+    @media (min-width: 1115px){
+        display: flex;
+        padding: 90px 50px;
+        gap: 124px;
+    }
+}
+
+// se crea clase especial para el js
+.show{
+    display: block;
+}
+//carrito para borralo centrado
+.cart-empty{
+    font-weight: 700;
+    color: v.$Black-modal;
+    border: 1px solid red;
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+
+
+//instalar sass
+// npm install node-sass
+
+
+//para correrlo
+//npx node-sass styles.scss styles.css
