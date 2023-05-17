@@ -1,57 +1,30 @@
-// Datos de usuarios registrados
-var users = [];
-
-// Función para registrar un nuevo usuario
-function registerUser(username, password) {
-  // Comprobar si el usuario ya existe
-  for (var i = 0; i < users.length; i++) {
-    if (users[i].username === username) {
-      alert("El usuario ya existe.");
-      return;
-    }
-  }
-
-  // Registrar el nuevo usuario
-  var newUser = {
-    username: username,
-    password: password
-  };
-  users.push(newUser);
-  alert("Registro exitoso.");
-}
-
-// Función para iniciar sesión
-function loginUser(username, password) {
-  // Buscar el usuario en la lista
-  for (var i = 0; i < users.length; i++) {
-    if (users[i].username === username && users[i].password === password) {
-      alert("Inicio de sesión exitoso.");
-      return;
-    }
-  }
-
-  // Si el usuario no se encuentra en la lista
-  alert("Nombre de usuario o contraseña incorrectos.");
-}
-
-// Obtener los formularios
-var loginForm = document.getElementById("loginForm");
-var registerForm = document.getElementById("registerForm");
-
-// Manejar el evento de envío del formulario de inicio de sesión
-loginForm.addEventListener("submit", function(event) {
+document.getElementById('login-form').addEventListener('submit', function(event) {
+  // Prevenir la acción por defecto del formulario
   event.preventDefault();
-  var username = document.getElementById("username").value;
-  var password = document.getElementById("password").value;
-  loginUser(username, password);
-  loginForm.reset();
-});
 
-// Manejar el evento de envío del formulario de registro
-registerForm.addEventListener("submit", function(event) {
-  event.preventDefault();
-  var newUsername = document.getElementById("newUsername").value;
-  var newPassword = document.getElementById("newPassword").value;
-  registerUser(newUsername, newPassword);
-  registerForm.reset();
+  // Recoger los valores de los campos del formulario
+  var email = document.getElementById('email').value;
+  var password = document.getElementById('pwd').value;
+
+  // Hacer la llamada a la API
+  fetch('http://127.0.0.1:5000/usuarios?correo=' + email + '&contrasena=' + password)
+      .then(function(response) {
+          if (response.ok) {
+              return response.json();
+          } else {
+              throw new Error('Error al iniciar sesión');
+          }
+      })
+      .then(function(data) {
+          if (data.success) {
+              document.getElementById('message').textContent = 'Inicio de sesión exitoso!';
+              window.location.href ='../index.html';
+          } else {
+              document.getElementById('message').textContent = 'Correo o contraseña incorrectos';
+          }
+      })
+      .catch(function(error) {
+          console.log('Hubo un problema con la petición Fetch:' + error.message);
+          document.getElementById('message').textContent = 'Error al iniciar sesión';
+      });
 });
