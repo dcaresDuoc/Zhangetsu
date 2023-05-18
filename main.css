@@ -546,7 +546,6 @@ input {
   border: 0;
   outline: none;
   padding: 18px 15px;
-  color: white;
 }
 
 input::placeholder {

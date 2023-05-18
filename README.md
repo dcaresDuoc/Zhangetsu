@@ -8,6 +8,6 @@ Gracias por ver mi obra de arte
 
 [Exquiel Alvarado](https://www.exequiels.com) Mostando mi projecto.
 
-**lo que ocupe --> HTML, CSS, Sass and JavaScript.**
+**lo que ocupe --> HTML, CSS, Sass and JavaScript, python.**
 
 ## @exequiel-alvarado  githud

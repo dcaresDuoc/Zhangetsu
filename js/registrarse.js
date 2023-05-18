@@ -30,8 +30,10 @@ fetch('http://127.0.0.1:5000/usuarios', {
 .then(function(data) {
     if (data.success) {
         document.getElementById('message').textContent = 'Usuario creado exitosamente!';
+       alert("creado existosamente");
     } else {
         document.getElementById('message').textContent = 'Error al crear el usuario';
+        alert("No se pudo registrar");
     }
 })
 .catch(function(error) {
