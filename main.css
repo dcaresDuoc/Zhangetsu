@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 /* Colors */
 /* Primary */
@@ -594,6 +595,37 @@ form p a {
 .btn-field button.disable {
   background-color: #eaeaea;
   color: #2c2f35;
+}
+
+.category__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.category__item-titulo {
+  text-align: center;
+  color: hsl(26, 100%, 55%);
+}
+
+.category__item {
+  border: 2px solid orangered;
+  display: flex;
+  justify-items: center;
+  text-align: center;
+  width: 200px; /* Ajusta el ancho según tus necesidades */
+  height: 200px; /* Ajusta el alto según tus necesidades */
+  margin: 10px; /* Ajusta los márgenes según tus necesidades */
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 50px;
+}
+
+.category__item img {
+  background-size: cover;
+  background-position: center;
 }
 
 /* y  sass sass/style.scss main.css --watch  (en terminal promp para actualizar los cambios en css */

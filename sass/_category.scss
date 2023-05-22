@@ -1,0 +1,40 @@
+@use 'variables' as v; 
+
+
+.category__list {
+    //border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+  }
+  
+  .category__item-titulo{
+    //border: 1px solid green;
+    text-align: center;
+    color: v.$Orange;
+    
+  }
+  .category__item {
+    border: 2px solid orangered;
+    display: flex;
+    justify-items: center;
+    text-align: center;
+    width: 200px; /* Ajusta el ancho según tus necesidades */
+    height: 200px; /* Ajusta el alto según tus necesidades */
+    margin: 10px; /* Ajusta los márgenes según tus necesidades */
+    background-size: cover;
+    background-position: center;
+    margin-bottom:50px;
+    
+    
+   
+  }
+  
+  .category__item img {
+    background-size: cover;
+    background-position: center;
+  }
+  
