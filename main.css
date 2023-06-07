@@ -605,6 +605,10 @@ form p a {
   justify-content: space-between;
 }
 
+.category__totulo {
+  justify-content: center;
+}
+
 .category__item-titulo {
   text-align: center;
   color: hsl(26, 100%, 55%);
