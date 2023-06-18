@@ -1,4 +1,7 @@
+from django.shortcuts import render
 from django.http import HttpResponse
 
-def index(resquest):
-    return HttpResponse('hola desde el archivo viwes.py')
+def index(request):
+    return render(request,'index.html', {
+        #context
+    })
