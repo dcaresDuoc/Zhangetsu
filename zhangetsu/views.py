@@ -1,8 +1,9 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
+from django.contrib import messages
 from django.contrib.auth import authenticate
 from django.contrib.auth import login
+from django.shortcuts import redirect
 
 
 def index(request):
@@ -30,11 +31,13 @@ def login_view(request):
             user = authenticate(username=username, password=password) #none
             if  user:
                  login(request, user)
-                 print("Usuario auntetificado")
+                # print("Usuario auntetificado")
+                 messages.success(request, 'Bienvenido {}'.format(user.username))
+                 return redirect('index')
 
             else:
-                 print("Usuario NO auntetificado")     
-             
+                 #print("Usuario NO auntetificado")     
+                 messages.error(request, 'Usuario o Contraseña no validas')
         return render(request , 'users/login.html', {
 
     })

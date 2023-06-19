@@ -12,6 +12,19 @@
         </head>
         <body>
            <div class="container">
+             {% if message %}
+                {% for message  in messages %}
+                    {% if message.tags =='success'%}
+                        <div class="alert alert-success">
+                            {{ message }}
+                        </div>
+                        {%else%}
+                        <div class="alert alert-danger">
+                            {{ message }}
+                        </div>
+                     {% endif %}   
+                {% enfor %}
+             {% endif %}
                 <div class="row">
                     <div class="col">
                         <h1>{{ message }}</h1>
