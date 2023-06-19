@@ -12,19 +12,15 @@
         </head>
         <body>
            <div class="container">
-             {% if message %}
-                {% for message  in messages %}
-                    {% if message.tags =='success'%}
-                        <div class="alert alert-success">
-                            {{ message }}
+               
+                {% if messages %}
+                    {% for message  in messages %}
+                        <div class="alert {% if  message.tags == 'success'%}alert-success{%else%}alert-danger{%endif%}">
+                            <button type="button" class="close" data-dismiss="alert">x</button>
+                            {{ message}}
                         </div>
-                        {%else%}
-                        <div class="alert alert-danger">
-                            {{ message }}
-                        </div>
-                     {% endif %}   
-                {% enfor %}
-             {% endif %}
+                    {% endfor %}
+                 {% endif %}
                 <div class="row">
                     <div class="col">
                         <h1>{{ message }}</h1>
@@ -32,9 +28,9 @@
                         <ul class="list-group">
                             {% for product in products %}
                                 <li class="list-group-item">
-                                    {{product.title }}
+                                    {{ product.title }}
                               
-                                    {#este es un comentario#}
+                                    {# este es un comentario #}
                                    
                                         {% if product.stock %}
                                           <span class="text-success">Disponible </span>  
