@@ -1,7 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+from django.contrib.auth import authenticate
+from django.contrib.auth import login
+
+
 def index(request):
+
+
     return render(request,'index.html', {
         #context
         'message': 'Listado de productos',
@@ -13,4 +19,22 @@ def index(request):
             {'title':'Escala 1/20','price':150000, 'stock': True},
         ]
          
+    })
+
+def login_view(request):
+     #para auntentificar un login de usuario
+        if request.method == 'POST':
+            username = request.POST.get('username') #diccionario
+            password = request.POST.get('password') #none
+
+            user = authenticate(username=username, password=password) #none
+            if  user:
+                 login(request, user)
+                 print("Usuario auntetificado")
+
+            else:
+                 print("Usuario NO auntetificado")     
+             
+        return render(request , 'users/login.html', {
+
     })
