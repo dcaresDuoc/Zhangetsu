@@ -7,10 +7,10 @@ def index(request):
         'message': 'Listado de productos',
         'title': 'Productos',
         'products':[
-            {'title':'Playera','price':5, 'stock': True},#productos
-            {'title':'Camisa','price':7, 'stock': True},
-            {'title':'Mochila','price':20, 'stock': False},
-            {'title':'lapto','price':500, 'stock': True},
+            {'title':'Escala 1/144','price':28000, 'stock': True},#productos
+            {'title':'Escala 1/100','price':39000, 'stock': True},
+            {'title':'Escala 1/64','price':76000, 'stock': False},
+            {'title':'Escala 1/20','price':150000, 'stock': True},
         ]
          
     })
