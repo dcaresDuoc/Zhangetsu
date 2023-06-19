@@ -50,3 +50,7 @@ def logout_view(request):
      messages.success(request, 'Sesion cerada exitosamente')
      return redirect ('login')
 
+
+
+def register(request):
+     return render(request, 'user/register.html')
