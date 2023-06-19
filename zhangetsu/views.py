@@ -10,6 +10,7 @@ def index(request):
             {'title':'Playera','price':5, 'stock': True},#productos
             {'title':'Camisa','price':7, 'stock': True},
             {'title':'Mochila','price':20, 'stock': False},
+            {'title':'lapto','price':500, 'stock': True},
         ]
 
     })
