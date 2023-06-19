@@ -12,5 +12,5 @@ def index(request):
             {'title':'Mochila','price':20, 'stock': False},
             {'title':'lapto','price':500, 'stock': True},
         ]
-
+         
     })
